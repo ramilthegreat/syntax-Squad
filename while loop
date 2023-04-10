@@ -3,7 +3,7 @@ print (" HI "  + name + "!" + " WELCOME TO GRADING CALCULATOR ")
 
 mark = []
 tot = 0
-print("Enter Number of Subjects: ")
+print("Enter Number of Subjects/Subject: ")
 subNo = int(input())
 print("Enter Marks Obtained in " + str(subNo) + " Subjects: ")
 for i in range(subNo):
@@ -15,23 +15,23 @@ avg = tot/subNo
 
 if avg>=99 and avg<=100:
     print("GPA = 1.00 ")
-elif avg>=96 and avg<98:
+elif avg>=96 and avg<=98:
     print("GPA = 1.25 ")
-elif avg>=93 and avg< 95:
+elif avg>=93 and avg<=95:
     print("GPA = 1.50")
-elif avg>=90 and avg<92:
+elif avg>=90 and avg<=92:
     print("GPA = 1.75")
-elif avg>=87 and avg<89:
+elif avg>=87 and avg<=89:
     print("GPA = 2.00")
-elif avg>=84 and avg<86:
+elif avg>=84 and avg<=86:
     print("GPA = 2.25")
-elif avg>=81 and avg<83:
+elif avg>=81 and avg<=83:
     print("GPA = 2.50")
-elif avg>=78 and avg<80:
+elif avg>=78 and avg<=80:
     print("GPA = 2.75")
-elif avg>=75 and avg<77:
+elif avg>=75 and avg<=77:
     print("GPA = 3.00")
-elif avg<= 74:
+elif avg<=74:
     print("GPA = 5.00")
 else:
     print("Invalid Input!")
