@@ -1,0 +1,51 @@
+import tkinter as tk
+ 
+def calculate_gpa():
+    name = name_entry.get()
+    marks = marks_entry.get().split()
+    total = sum(map(int, marks))
+    avg = total / len(marks)
+    if avg >= 99 and avg <= 100:
+        gpa = "1.00"
+    elif avg >= 96 and avg <= 98:
+        gpa = "1.25"
+    elif avg >= 93 and avg <= 95:
+        gpa = "1.50"
+    elif avg >= 90 and avg <= 92:
+        gpa = "1.75"
+    elif avg >= 87 and avg <= 89:
+        gpa = "2.00"
+    elif avg >= 84 and avg <= 86:
+        gpa = "2.25"
+    elif avg >= 81 and avg <= 83:
+        gpa = "2.50"
+    elif avg >= 78 and avg <= 80:
+        gpa = "2.75"
+    elif avg >= 75 and avg <= 77:
+        gpa = "3.00"
+    elif avg <= 74:
+        gpa = "5.00"
+    else:
+        gpa = "Invalid input"
+    result_label.config(text="Hi " + name + "! Your GPA is " + gpa)
+ 
+root = tk.Tk()
+root.title("Grading Calculator")
+ 
+name_label = tk.Label(root, text="Enter your name:")
+name_label.pack()
+name_entry = tk.Entry(root)
+name_entry.pack()
+ 
+marks_label = tk.Label(root, text="Enter marks obtained in each subject separated by space:")
+marks_label.pack()
+marks_entry = tk.Entry(root)
+marks_entry.pack()
+ 
+calculate_button = tk.Button(root, text="Calculate GPA", command=calculate_gpa)
+calculate_button.pack()
+ 
+result_label = tk.Label(root)
+result_label.pack()
+ 
+root.mainloop()
