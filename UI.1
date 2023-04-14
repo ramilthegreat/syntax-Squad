@@ -1,0 +1,64 @@
+from tkinter import *
+from tkinter import messagebox as msg
+
+root = Tk()
+root.maxsize(800,600)
+root.minsize(800,600)
+my_label = Label(root, text="GRADING CALCULATOR", bg="grey", font=("Calibry", 25))
+my_label.pack()
+
+A_label = Label(root, text="First sub:", bg="indigo", fg="white",font=("Calibry", 15))
+A_label.place(x=250,y=100)
+
+A_input = Entry(root, bg="grey", font=("Bold", 15), fg="black")
+A_input.place(x=350, y=100)
+
+B_label = Label(root, text="Second sub:", bg="indigo", fg="white", font=("Calibry", 15))
+B_label.place(x=222, y=150)
+B_input = Entry(root, bg="grey", font=("Calibry", 15), fg="black")
+B_input.place(x=350, y=150)
+
+C_label = Label(root, text="Third sub:", bg="indigo", fg="white", font=("Calibry", 15))
+C_label.place(x=244, y=200)
+C_input = Entry(root, bg="grey", fg="black", font=("Calibry", 15))
+C_input.place(x=350, y=200)
+
+D_label = Label(root, text="fourth sub:", bg="indigo", fg="white", font=("Calibry", 15))
+D_label.place(x=238, y=250)   
+D_input = Entry(root, bg="grey", fg="black", font=("Calibry", 15))
+D_input.place(x=350, y=250)
+
+E_label = Label(root, text="fifth sub:", bg="indigo", fg="white", font=("Calibry", 15))
+E_label.place(x=238, y=300)   
+E_input = Entry(root, bg="grey", fg="black", font=("Calibry", 15))
+E_input.place(x=350, y=300)
+
+F_label = Label(root, text="sixth sub:", bg="indigo", fg="white", font=("Calibry", 15))
+F_label.place(x=238, y=350)   
+F_input = Entry(root, bg="grey", fg="black", font=("Calibry", 15))
+F_input.place(x=350, y=350)
+
+G_label = Label(root, text="seventh sub:", bg="indigo", fg="white", font=("Calibry", 15))
+G_label.place(x=238, y=400)   
+G_input = Entry(root, bg="grey", fg="black", font=("Calibry", 15))
+G_input.place(x=350, y=400)
+
+H_label = Label(root, text="8th sub:", bg="indigo", fg="white", font=("Calibry", 15))
+H_label.place(x=238, y=450)   
+H_input = Entry(root, bg="grey", fg="black", font=("Calibry", 15))
+H_input.place(x=350, y=450)
+
+calculate_button = Button(root,text="Calculate Grade", fg="red", bd=10, font=("Arial", 12), command=calculate_grade)
+calculate_button.place(x=388,y=500)
+
+        
+total_label = Label(root,text="", fg="black", bg="grey", font=("Calibry", 12))
+total_label.place(x=100,y=520)
+        
+percentage_label =Label(root,text="", fg="black", bg="grey", font=("Calibry", 12))
+percentage_label.place(x=100, y=540)
+        
+grade_label = Label(root, text="", fg="black", bg="grey", font=("Calibry", 12))
+grade_label.place(x=100,y=560)
+
+root.mainloop()
