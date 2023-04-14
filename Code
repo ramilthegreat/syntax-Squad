@@ -1,0 +1,51 @@
+def calculate_grade():
+    try:       
+        A = float(A_input.get())
+        B = float(B_input.get())
+        C = float(C_input.get())
+        D = float(D_input.get())
+        E = float(A_input.get())
+        F = float(A_input.get())
+        G = float(A_input.get())
+        H = float(A_input.get())
+
+
+        total = A + B + C + D + E + F + G + E
+        avg = (total / 800)*100
+        
+        for i in range(subNo):
+            tot = total + int(mark[i])
+            avg = tot/subNo
+
+            if avg>=99 and avg<=100:
+                print("GPA = 1.00 ")
+            elif avg>=96 and avg<=98:
+                print("GPA = 1.25 ")
+            elif avg>=93 and avg<=95:
+                print("GPA = 1.50")
+            elif avg>=90 and avg<=92:
+                print("GPA = 1.75")
+            elif avg>=87 and avg<=89:
+                print("GPA = 2.00")
+            elif avg>=84 and avg<=86:
+                print("GPA = 2.25")
+            elif avg>=81 and avg<=83:
+                print("GPA = 2.50")
+            elif avg>=78 and avg<=80:
+                print("GPA = 2.75")
+            elif avg>=75 and avg<=77:
+                print("GPA = 3.00")
+            elif avg<= 74:
+                print("GPA = 5.00")
+            else:
+                print("invalid input")
+
+        
+        total_label.config(text="TOTAL= %.2f" % total)
+        
+        percentage_label.config(text="AVERAGE =%.2f"%avg)
+        
+        grade_label.config(text="GPA: " + letter_grade)
+        
+    except ValueError:
+        msg.showwarning("Warning ","Please Enter numbers or Decimals only")
